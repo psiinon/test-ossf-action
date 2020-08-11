@@ -1,0 +1,18 @@
+---
+webapp: 1.0.0
+apps:
+- id: app1
+  name: Application 1
+  description: An app that provides a docker container
+  control:
+    type: docker
+    registry: https://hub.docker.com/  # This is the default
+    image: psiinon/bodgeit
+    port: 8080                         # The default port is 80
+    path: /bodgeit                     # The default path is /
+- id: app2
+  name: Another application
+  description: An app that provides a public FQN
+  control:
+    type: public
+    url: https://www.zaproxy.org/
